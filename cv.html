@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshini Patel K M - Resume</title>
+
+<!-- FIXED HTML2PDF VERSION -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<style>
+/* RESET */
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+/* FIXED — Removed animated gradient */
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:#e8e8ff;    /* SOLID color for stability */
+    padding:20px;
+}
+
+/* CONTAINER */
+.container{ max-width:1000px; margin:auto; }
+
+/* FIXED DOWNLOAD BUTTON */
+.download-btn{
+    background:#667eea;
+    color:white;
+    padding:15px 40px;
+    border:none;
+    border-radius:30px;
+    margin:auto;
+    display:block;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(102,126,234,0.4);
+}
+.download-btn:hover{
+    transform:scale(1.05);
+}
+
+/* RESUME CARD */
+.resume{
+    background:white;
+    border-radius:15px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+    overflow:hidden;
+}
+
+/* FIXED HEADER */
+.header-banner{
+    background:#667eea;
+    padding:40px 40px;
+    color:white;
+}
+.header-content{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+.profile-photo{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid rgba(255,255,255,0.5);
+}
+.header-text h1{
+    font-size:40px;
+    font-weight:800;
+}
+.title{
+    font-size:18px;
+    margin-bottom:15px;
+}
+.contact-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.contact-info span{
+    background:rgba(255,255,255,0.25);
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+/* BODY */
+.resume-body{
+    padding:40px;
+}
+
+.section{ margin-bottom:35px; }
+.section h2{
+    font-size:26px;
+    font-weight:800;
+    color:#667eea;
+    margin-bottom:15px;
+}
+
+/* Summary */
+.summary{
+    background:#f5f7ff;
+    padding:20px;
+    border-left:5px solid #667eea;
+    border-radius:10px;
+    line-height:1.7;
+}
+
+/* ITEMS */
+.education-item, .project-item, .workshop-item{
+    padding:18px;
+    background:#fafaff;
+    border-left:4px solid #667eea;
+    border-radius:10px;
+    margin-bottom:12px;
+}
+.education-item h3, .project-item h3{
+    font-size:18px;
+    font-weight:700;
+}
+.meta{
+    font-size:14px;
+    color:#777;
+    margin-top:5px;
+}
+
+/* Skills */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+.skill-category{
+    background:#f7f7ff;
+    padding:18px;
+    border-radius:10px;
+}
+.skill-category h4{
+    color:#667eea;
+    margin-bottom:10px;
+}
+.skill-category li{
+    margin-bottom:6px;
+    font-size:14px;
+}
+
+/* Soft skills FIXED */
+.soft-skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.soft-skills span{
+    background:#667eea;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    font-size:14px;
+    box-shadow:0 5px 15px rgba(102,126,234,0.3);
+}
+
+/* Achievements */
+.achievements-list{
+    background:#fafaff;
+    padding:20px;
+    border-radius:10px;
+}
+.achievements-list li{
+    margin-bottom:10px;
+}
+
+/* Hobbies */
+.hobby-item{
+    padding:12px;
+    background:#fafaff;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+/* Languages */
+.languages-list span{
+    background:#eef;
+    padding:10px 20px;
+    border-radius:20px;
+    margin-right:10px;
+    font-weight:600;
+}
+
+/* Declaration */
+.declaration{
+    background:#f5f7ff;
+    padding:15px;
+    border-left:5px solid #667eea;
+    border-radius:10px;
+    font-style:italic;
+}
+
+/* PRINT MODE FIXES */
+@media print{
+    body{ background:white !important; }
+    .download-btn{ display:none; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<button class="download-btn" onclick="downloadPDF()">📥 Download Resume</button>
+
+<div class="resume" id="resume">
+
+    <div class="header-banner">
+        <div class="header-content">
+            <img src="harsh.jpg" class="profile-photo">
+            <div class="header-text">
+                <h1>Harshini Patel K M</h1>
+                <div class="title">3rd Year B.E. Computer Science & Engineering</div>
+                <div class="contact-info">
+                    <span>📧 hemithapatel@gmail.com</span>
+                    <span>📱 9901950949</span>
+                    <span>📍 Hassan, Karnataka</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="resume-body">
+
+        <div class="section">
+            <h2>Career Objective</h2>
+            <div class="summary">
+                Motivated and detail-oriented Computer Science engineering student seeking internship opportunities...
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B.E – Computer Science</h3>
+                <div class="meta">Malnad College of Engineering | CGPA: 8.0</div>
+            </div>
+            <div class="education-item">
+                <h3>PUC</h3>
+                <div class="meta">Brigade PU College | 76%</div>
+            </div>
+            <div class="education-item">
+                <h3>SSLC</h3>
+                <div class="meta">CKS School | 90%</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming</h4>
+                    <ul><li>C, C++</li><li>Java</li><li>Python</li><li>JavaScript</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Web</h4>
+                    <ul><li>HTML, CSS</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Database</h4>
+                    <ul><li>MySQL</li></ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools</h4>
+                    <ul><li>Git, GitHub</li><li>VS Code</li></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>1. Portable ECG Monitoring System</h3>
+                <div class="meta">Team Project – 4 Members</div>
+                <ul>
+                    <li>Designed dashboard for waveforms</li>
+                    <li>Responsible for data visualization</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3>2. Smart Door Lock Using RFID</h3>
+                <ul>
+                    <li>RFID authentication system</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <h2>Soft Skills</h2>
+            <div class="soft-skills">
+                <span>Communication</span>
+                <span>Problem Solving</span>
+                <span>Teamwork</span>
+                <span>Leadership</span>
+                <span>Time Management</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script>
+function downloadPDF(){
+    const element = document.getElementById("resume");
+
+    const opt = {
+        filename: "Harshini_Patel_Resume.pdf",
+        html2canvas: { scale: 3, useCORS: true },  /* FIXED — sharper scale */
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+    };
+
+    html2pdf().set(opt).from(element).save();
+}
+</script>
+
+</body>
+</html>
